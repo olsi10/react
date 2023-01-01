@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="Z-UA-Compatible" content=""ie-edge>
+        <title>Example</title>
+        <style>
+            * {
+                margin : 0;
+                padding: 0;
+                border : none;
+            }
+
+            #root p {
+                color: white;
+                font-size: 20px;
+                background-color: green;
+                text-align: center;
+                width: 200px;
+            }
+
+            #btn-plus {
+                width: 200px;
+                background-color: red;
+                border: 2px solid #000000;
+                font-size: 15px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="root"></div>
+        <button id="btn-plus">+</button>
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+        <script type="text/javascript">
+            // console.log(React);
+            // console.log(ReactDom);
+
+            // const root = document.querySelector('#root');
+            // const btn_plus = document.querySelector('#btn-plus');
+
+            // let i = 0;
+
+            // root.innerHTML = '<p>init : 0</p>';
+            
+            // btn_plus.addEventListener('click', () => {
+            //     root.innerHTML = `<p>init : ${i++}</p>`;
+            // });
+
+
+
+            // // 객체형 컴포넌트
+            // const component = {
+            //     // 컴포넌트 초기값
+            //     msg : "init",
+            //     count : 0,
+            //     render() {
+            //         return `<p>${this.msg} : ${this.count}</p>`;
+            //     }
+            // };
+
+            // function render(rootElement, component) {
+            //     rootElement.innerHTML = component.render();
+            // }
+
+            // // 초기화
+            // render(document.querySelector('#root'), component);
+
+            // document.querySelector('#btn-plus').addEventListener('click', () => {
+            //     component.msg = "update";
+            //     component.count = component.count + 1;
+
+            //     // 값이 바뀔 때 계속 반복
+            //     render(document.querySelector('#root'), component);
+            // })
+
+
+            // p hello = world < world 칸이 공란
+            const Component = props => {
+                return React.createElement('p', null, `${props.msg} : ${props.count}`);
+            }
+            
+            // 리액트 문법으로 수정
+            ReactDOM.render(React.createElement(Component, {msg: 'init', count:0}, null), document.querySelector('#root')); 
+            
+            document.querySelector('#btn-plus').addEventListener('click', () => {
+                ReactDOM.render(React.createElement(Component, {msg: 'update', count:10}, null), document.querySelector('#root')); 
+
+            })
+
+
+        </script>
+
+    </body>
+</html>
