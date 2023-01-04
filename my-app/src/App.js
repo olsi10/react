@@ -12,3 +12,6 @@ function App() {
 }
 
 export default App;
+
+// ** 항상 무언가 실행할 때 경로 확인 필수!! **
+// npm install react-router-dom@6 <- 리액트 라우터 버전6
