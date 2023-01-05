@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  padding:20px;
+}
+
+.p-btn, .m-btn { 
+  width: 100px;
+  height: 50px;
+  background-color: rgb(118, 203, 118);
+  font-size: 30px;
+  margin-top: 40px;
+}
