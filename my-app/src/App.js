@@ -15,6 +15,7 @@ import List from "./pages/List";
 function App() {
   return (
     <div className="App">
+      <h1>안녕하세요 리액트를 한 시간 배워서 이정도 했습니다.</h1>
       <nav>
         {/* a 태그의 href="/" 와 같음 */}
         <Link to = "/">Home</Link> | <Link to = "/about">About</Link> | <Link to = "/counter">Counter</Link> | <Link to = "/input">Input</Link> | <Link to = "/input2">Input2</Link> | <Link to = "/input">Input</Link> | <Link to = "/list">List</Link> 
