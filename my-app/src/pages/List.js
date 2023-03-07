@@ -28,6 +28,7 @@ const UserList = () => {
             <tbody>
                 {/* user라는 자식 컴포넌트에 userData라는 프로퍼티 이름으로 하나씩 던져줌 */}
                 {users.map(user => <User userData={user}/>)}
+                {/* map은 callback 함수를 각각의 요소에 대해 한번씩 순서대로 불러 그 함수의 반환값으로 새로운 배열을 만든다. array를 돌면서 array 로 결과가 출력된다 */}
             </tbody>
         </table>
     )
